@@ -56,7 +56,6 @@ struct Data1N: View {
     }
     
     
-    
     struct WelcomeScreen_Previews: PreviewProvider {
         static var previews: some View {
             Data1N()

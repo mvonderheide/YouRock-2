@@ -60,7 +60,6 @@ struct Period1N: View {
     }
     
     
-    
     struct WelcomeScreen_Previews: PreviewProvider {
         static var previews: some View {
             Period1N()
