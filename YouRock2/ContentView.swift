@@ -27,13 +27,35 @@ struct ContentView: View {
         var id = UUID()
         var period : String
         var className : String
-        //var roster : [Student]
+        var roster : [Student]
     }
     
-    var teacher1 : Teacher = Teacher(prefix: "Mr. ", firstName: "Matthew ", lastName: "Vonderheide",
-        classes : [])
+    struct Student: Hashable {
+        var id = UUID()
+        var firstName : String
+        var lastName : String
+        var numRocks : Int
+    }
     
-    var class1 : Class = Class(period: "1", className: "App Dev with Swift")
+    struct SELCategory: Hashable {
+        var id = UUID()
+        var categoryName : String
+        var subCategories : [String]
+    }
+    
+    var teacher1 : Teacher = Teacher(prefix: "Mr.", firstName: "Matthew", lastName: "Vonderheide", classes: [])
+    
+    var class1 : Class = Class(period: "1", className: "App Dev with Swift", roster: [] )
+    
+    var class2 : Class = Class(period: "2", className: "Exploring Computer Science", roster: [] )
+    
+    var student1 : Student = Student(firstName: "Miguel", lastName: "Sanchez", numRocks: 4)
+    
+    var student2 : Student = Student(firstName: "Dimitri", lastName: "Villalobos", numRocks: 4)
+    
+    var SELCategory1 : SELCategory = SELCategory(categoryName: "Relationship Skills", subCategories : ["you put yourself in someone else's shoes"])
+    
+    var leaderBoard : [Student] = []
     
     var body: some View {
         NavigationView {

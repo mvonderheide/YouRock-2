@@ -21,6 +21,16 @@ import SwiftUI
         
  */
 struct Period1N: View {
+    
+    struct Student: Hashable {
+        var id = UUID()
+        var firstName : String
+        var lastName : String
+        var numRocks : Int
+    }
+    
+    var student1 : Student = Student(firstName: "Miguel", lastName: "Sanchez", numRocks: 4)
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -29,7 +39,15 @@ struct Period1N: View {
                 Text("App Dev with Swift")
                     .font(.title3)
                     .padding()
-                Text("Choose a Student")                //Text("Drop Down Menu Here")
+                Text("Choose a Student")
+                NavigationLink(
+                    destination: ChooseCategory(),
+                    label: {
+                        Text(student1.firstName + " " + student1.lastName)
+                    })
+                
+                
+                //Text("Drop Down Menu Here")
                 Image("rockWall1")
                     .resizable()
                     .scaledToFit()
