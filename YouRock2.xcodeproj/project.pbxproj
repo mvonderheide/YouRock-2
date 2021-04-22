@@ -11,6 +11,12 @@
 		84E899822632109F00FD69FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E899812632109F00FD69FA /* ContentView.swift */; };
 		84E89984263210A300FD69FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E89983263210A300FD69FA /* Assets.xcassets */; };
 		84E89987263210A300FD69FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E89986263210A300FD69FA /* Preview Assets.xcassets */; };
+		84E899902632110B00FD69FA /* WelcomeScreen2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E8998F2632110B00FD69FA /* WelcomeScreen2.swift */; };
+		84E899932632120B00FD69FA /* Data1N.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E899922632120B00FD69FA /* Data1N.swift */; };
+		84E899962632121A00FD69FA /* Period1N.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E899952632121A00FD69FA /* Period1N.swift */; };
+		84E899992632123200FD69FA /* ChooseCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E899982632123200FD69FA /* ChooseCategory.swift */; };
+		84E8999C2632125300FD69FA /* SocialAwareness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E8999B2632125300FD69FA /* SocialAwareness.swift */; };
+		84E8999F2632126900FD69FA /* StudentRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E8999E2632126900FD69FA /* StudentRecognition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +26,12 @@
 		84E89983263210A300FD69FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84E89986263210A300FD69FA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		84E89988263210A300FD69FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84E8998F2632110B00FD69FA /* WelcomeScreen2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WelcomeScreen2.swift; path = ../../WelcomeScreen2.swift; sourceTree = "<group>"; };
+		84E899922632120B00FD69FA /* Data1N.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data1N.swift; sourceTree = "<group>"; };
+		84E899952632121A00FD69FA /* Period1N.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period1N.swift; sourceTree = "<group>"; };
+		84E899982632123200FD69FA /* ChooseCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCategory.swift; sourceTree = "<group>"; };
+		84E8999B2632125300FD69FA /* SocialAwareness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SocialAwareness.swift; path = ../../SocialAwareness.swift; sourceTree = "<group>"; };
+		84E8999E2632126900FD69FA /* StudentRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentRecognition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,12 @@
 			children = (
 				84E8997F2632109F00FD69FA /* YouRock2App.swift */,
 				84E899812632109F00FD69FA /* ContentView.swift */,
+				84E8998F2632110B00FD69FA /* WelcomeScreen2.swift */,
+				84E899922632120B00FD69FA /* Data1N.swift */,
+				84E899952632121A00FD69FA /* Period1N.swift */,
+				84E899982632123200FD69FA /* ChooseCategory.swift */,
+				84E8999B2632125300FD69FA /* SocialAwareness.swift */,
+				84E8999E2632126900FD69FA /* StudentRecognition.swift */,
 				84E89983263210A300FD69FA /* Assets.xcassets */,
 				84E89988263210A300FD69FA /* Info.plist */,
 				84E89985263210A300FD69FA /* Preview Content */,
@@ -138,8 +156,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84E899932632120B00FD69FA /* Data1N.swift in Sources */,
 				84E899822632109F00FD69FA /* ContentView.swift in Sources */,
+				84E8999C2632125300FD69FA /* SocialAwareness.swift in Sources */,
+				84E8999F2632126900FD69FA /* StudentRecognition.swift in Sources */,
+				84E899992632123200FD69FA /* ChooseCategory.swift in Sources */,
 				84E899802632109F00FD69FA /* YouRock2App.swift in Sources */,
+				84E899962632121A00FD69FA /* Period1N.swift in Sources */,
+				84E899902632110B00FD69FA /* WelcomeScreen2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
