@@ -55,9 +55,10 @@ struct ContentView: View {
     
     var SELCategory1 : SELCategory = SELCategory(categoryName: "Relationship Skills", subCategories : ["you put yourself in someone else's shoes"])
     
-    var leaderBoard : [Student] = []
+    
     
     var body: some View {
+        var roster1 : [Class] = [class1, class2]
         NavigationView {
             VStack {
                 Image("youRock")
