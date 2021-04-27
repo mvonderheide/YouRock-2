@@ -32,7 +32,7 @@ struct Period1N: View {
     var student1 : Student = Student(firstName: "Miguel", lastName: "Sanchez", numRocks: 4)
     
     var body: some View {
-        NavigationView {
+        
             VStack {
                 Text("1st Period")
                     .font(.title)
@@ -78,11 +78,11 @@ struct Period1N: View {
     }
     
     
-    struct WelcomeScreen_Previews: PreviewProvider {
+    struct Period1N_Previews: PreviewProvider {
         static var previews: some View {
             Period1N()
         }
     }
-}
+
 
 

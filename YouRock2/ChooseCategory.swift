@@ -22,7 +22,7 @@ struct ChooseCategory: View {
     let bWidth : CGFloat = 250
     let bHeight : CGFloat = 40
     var body: some View {
-        NavigationView {
+        
             VStack {
                 Text("Choose a Category")
                     .font(.title)
@@ -33,9 +33,11 @@ struct ChooseCategory: View {
                         
                         ZStack {
                             RoundedRectangle(cornerRadius: 5)
+                                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                                 .frame(width: bWidth, height: bHeight)
                             Text("Relationship Skills")
                                 .foregroundColor(.white)
+                            
                             
                         }
                         
@@ -45,6 +47,7 @@ struct ChooseCategory: View {
                     label: {
                         ZStack {
                             RoundedRectangle(cornerRadius: 5)
+                                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                                 .frame(width: bWidth, height: bHeight)
                             Text("Responsible Decision-Making")
                                 .foregroundColor(.white)
@@ -56,6 +59,7 @@ struct ChooseCategory: View {
                     label: {
                         ZStack {
                             RoundedRectangle(cornerRadius: 5)
+                                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                                 .frame(width: bWidth, height: bHeight)
                             Text("Self-Awareness")
                                 .foregroundColor(.white)
@@ -63,10 +67,11 @@ struct ChooseCategory: View {
                         }
                     })
                 NavigationLink(
-                    destination: Text("SelfManagement"),
+                    destination: SelfManagement(),
                     label: {
                         ZStack {
                             RoundedRectangle(cornerRadius: 5)
+                                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                                 .frame(width: bWidth, height: bHeight)
                             Text("Self-Management")
                                 .foregroundColor(.white)
@@ -75,10 +80,11 @@ struct ChooseCategory: View {
                         
                     })
                 NavigationLink(
-                    destination: SocialAwareness(),
+                    destination: Text("SocialAwareness"),
                     label: {
                         ZStack {
                             RoundedRectangle(cornerRadius: 5)
+                                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                                 .frame(width: bWidth, height: bHeight)
                             Text("Social Awareness")
                                 .foregroundColor(.white)
@@ -110,6 +116,6 @@ struct ChooseCategory: View {
             ChooseCategory()
         }
     }
-}
+
 
 
