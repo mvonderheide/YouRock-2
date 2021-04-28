@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AppDevWithSwiftLibrary
 /*
  NavigationView
  Image miniLogoBar

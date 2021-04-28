@@ -5,6 +5,7 @@
 //  Created by admin on 4/16/21.
 //
 import SwiftUI
+import AppDevWithSwiftLibrary
 /*
  Navigation view
  VStack of
@@ -58,7 +59,7 @@ struct ContentView: View {
     
     
     var body: some View {
-        var roster1 : [Class] = [class1, class2]
+        let _ : [Class] = [class1, class2]
         NavigationView {
             VStack {
                 Image("youRock")
@@ -66,10 +67,11 @@ struct ContentView: View {
                     .scaledToFit()
                     .frame(width: 350)
                     .padding(100)
+                Spacer()
                 NavigationLink(
                     destination: WelcomeScreen2(),
                     label: {
-                        Text("Get Started, " + teacher1.prefix + teacher1.firstName + teacher1.lastName)
+                        Text("Get Started, " + teacher1.prefix + " " + teacher1.lastName)
                     })
             }
             

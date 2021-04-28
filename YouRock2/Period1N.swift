@@ -4,23 +4,27 @@
 //
 //  Created by admin on 4/16/21.
 //
- 
+
 import SwiftUI
+import AppDevWithSwiftLibrary
 /*
  NavigationView
-    Image miniLogoBar
-    VStack
-        Text class.period
-        Text class.className
-        Text "Choose a Student"
-        //Replace with a drop down menu
-        NavigationLink
-            destination: ChooseCategory
-            label: "Dimitri Villalobos"
-        Image rockWall
-        
+ Image miniLogoBar
+ VStack
+ Text class.period
+ Text class.className
+ Text "Choose a Student"
+ //Replace with a drop down menu
+ NavigationLink
+ destination: ChooseCategory
+ label: "Dimitri Villalobos"
+ Image rockWall
+ 
  */
 struct Period1N: View {
+    var frameworks = ["Daniel Bang", "Smadar Bergman", "Mia Harris", "Kevin McQuown", "Miguel Sanchez", "Dimitri Villalobos"]
+    
+    @State private var selectedFrameworkIndex = 0
     
     struct Student: Hashable {
         var id = UUID()
@@ -33,56 +37,68 @@ struct Period1N: View {
     
     var body: some View {
         
-            VStack {
-                Text("1st Period")
-                    .font(.title)
-                Text("App Dev with Swift")
-                    .font(.title3)
-                    .padding()
-                Text("Choose a Student")
-                NavigationLink(
-                    destination: ChooseCategory(),
-                    label: {
-                        Text(student1.firstName + " " + student1.lastName)
-                    })
-                
-                
-                //Text("Drop Down Menu Here")
-                Image("rockWall1")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 250)
-                    .padding(50)
-                    
-                NavigationLink(
-                    destination: StudentRecognition(),
-                    label: {
-                        Text("Start Over")
-                    })
+        VStack {
+            Text("1st Period")
+                .font(.title)
+            Text("App Dev with Swift")
+                .font(.title3)
+                .padding()
+            Text("Choose a Student")
+            //NavigationLink(
+            //   destination: ChooseCategory(),
+            //    label: {
+            //     Text(student1.firstName + " " + student1.lastName)
+            //  })
+            
+            //Drop down menu starts here (includes frameworks and state variable)
+            Picker(selection: $selectedFrameworkIndex, label: Text("")) {
+                ForEach(0 ..< frameworks.count) {
+                    Text(self.frameworks[$0])
+                }
             }
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .principal) {
-                    HStack {
-                        Image("youRock")
-                         .resizable()
-                         .scaledToFit()
-                         .frame(width: 50
-                         )
-                         .padding(100)
-                       
-                    }
+            NavigationLink(
+                destination: ChooseCategory(),
+                label: {
+                    Text("\(frameworks[selectedFrameworkIndex])")
+                })
+           
+            
+        
+            Image("rockWall1")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 500)
+                .padding(50)
+            
+            NavigationLink(
+                destination: WelcomeScreen2(),
+                label: {
+                    Text("Start Over")
+                })
+        }
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                HStack {
+                    Image("youRock")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 50
+                        )
+                        .padding(100)
+                    
                 }
             }
         }
     }
-    
-    
-    struct Period1N_Previews: PreviewProvider {
-        static var previews: some View {
-            Period1N()
-        }
+}
+
+
+struct Period1N_Previews: PreviewProvider {
+    static var previews: some View {
+        Period1N()
     }
+}
 
 
 
