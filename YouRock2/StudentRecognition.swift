@@ -10,6 +10,7 @@ import AppDevWithSwiftLibrary
 
 struct StudentRecognition: View {
     var body: some View {
+        
         VStack {
             
             Text("Miguel, you rock because you exhibited self-discipline and perseverance!")

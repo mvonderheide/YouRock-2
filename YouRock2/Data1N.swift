@@ -22,6 +22,7 @@ struct Data1N: View {
     let width3 : CGFloat = 80
     let height1: CGFloat = 40
     let cornerRad: CGFloat = 4
+    
     struct Student: Hashable {
         var id = UUID()
         var firstName : String

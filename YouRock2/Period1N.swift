@@ -59,7 +59,7 @@ struct Period1N: View {
             NavigationLink(
                 destination: ChooseCategory(),
                 label: {
-                    Text("\(frameworks[selectedFrameworkIndex])")
+                    Text("Go")
                 })
            
             
