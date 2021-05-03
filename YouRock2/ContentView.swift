@@ -50,24 +50,25 @@ struct ContentView: View {
     
     var class2 : Class = Class(period: "2", className: "Exploring Computer Science", roster: [] )
     
-    var student1 : Student = Student(firstName: "Miguel", lastName: "Sanchez", numRocks: 21)
+    var student1 : Student = Student(firstName: "Miguel", lastName: "Sanchez", numRocks: 6)
     
-    var student2 : Student = Student(firstName: "Dimitri", lastName: "Villalobos", numRocks: 19)
+    var student2 : Student = Student(firstName: "Dimitri", lastName: "Villalobos", numRocks: 5)
     
-    var student3 : Student = Student(firstName: "Smadar", lastName: "Bergman", numRocks: 16)
+    var student3 : Student = Student(firstName: "Smadar", lastName: "Bergman", numRocks: 4)
     
-    var student4 : Student = Student(firstName: "Kevin", lastName: "McQuown", numRocks: 13)
+    var student4 : Student = Student(firstName: "Kevin", lastName: "McQuown", numRocks: 8)
     
-    var student5 : Student = Student(firstName: "Daniel", lastName: "Bang", numRocks: 9)
+    var student5 : Student = Student(firstName: "Daniel", lastName: "Bang", numRocks: 7)
     
-    var student6 : Student = Student(firstName: "Mia", lastName: "Harris", numRocks: 5)
+    var student6 : Student = Student(firstName: "Mia", lastName: "Harris", numRocks: 9)
     
     var SELCategory1 : SELCategory = SELCategory(categoryName: "Relationship Skills", subCategories : ["you put yourself in someone else's shoes"])
     
-    var isTeacherMode = false
+    //This app is showing the teacher's view.  When boolean is set to false, it will show the student view
+    var isTeacherMode = true
     
     var body: some View {
-        let _ : [Class] = [class1, class2]
+        let _ : [Class] = teacher1.classes
         NavigationView {
             VStack {
                 Image("youRock")
@@ -86,7 +87,7 @@ struct ContentView: View {
                     NavigationLink(
                         destination: StudentHistoryView(),
                         label: {
-                            Text("Get Started, " + teacher1.prefix + " " + teacher1.lastName)
+                            Text("Student History View")
                         })
                 }
             }
