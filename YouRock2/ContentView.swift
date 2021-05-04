@@ -65,7 +65,7 @@ struct ContentView: View {
     var SELCategory1 : SELCategory = SELCategory(categoryName: "Relationship Skills", subCategories : ["you put yourself in someone else's shoes"])
     
     //This app is showing the teacher's view.  When boolean is set to false, it will show the student view
-    var isTeacherMode = true
+    @State var isTeacherMode = true
     
     var body: some View {
         let _ : [Class] = teacher1.classes
@@ -82,14 +82,32 @@ struct ContentView: View {
                         destination: WelcomeScreen2(),
                         label: {
                             Text("Get Started, " + teacher1.prefix + " " + teacher1.lastName)
+                                .padding(5)
+                                .background(Color.blue)
+                                .cornerRadius(8)
+                                .foregroundColor(.white)
+                                .padding(5)
+                                .font(.system(size: 25))
                         })
+                    Spacer()
                 } else {
                     NavigationLink(
                         destination: StudentHistoryView(),
                         label: {
-                            Text("Student History View")
+                            Text("Student History View").padding(5)
+                                .background(Color.blue)
+                                .cornerRadius(8)
+                                .foregroundColor(.white)
+                                .padding(5)
+                                .font(.system(size: 25))
+                            
                         })
+                    Spacer()
                 }
+                Toggle(isOn: $isTeacherMode, label: {
+                    Text("Teacher Mode")
+                }).frame(width: 200)
+                
             }
             
             
@@ -100,8 +118,7 @@ struct ContentView: View {
                         Image("youRock")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 50
-                            )
+                            .frame(width: 50)
                             .padding(100)
                         
                     }
@@ -118,6 +135,8 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+        ContentView()
+            .environment(\.locale, Locale(identifier: "es"))
     }
 }
 

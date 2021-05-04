@@ -38,6 +38,7 @@ struct Period1N: View {
     var body: some View {
         
         VStack {
+            Spacer()
             Text("1st Period")
                 .font(.title)
             Text("App Dev with Swift")
@@ -59,11 +60,11 @@ struct Period1N: View {
             NavigationLink(
                 destination: ChooseCategory(),
                 label: {
-                    Text("Go")
+                    Text("\(frameworks[selectedFrameworkIndex])")
                 })
-           
             
-        
+            
+            
             Image("rockWall1")
                 .resizable()
                 .scaledToFit()
@@ -97,6 +98,8 @@ struct Period1N: View {
 struct Period1N_Previews: PreviewProvider {
     static var previews: some View {
         Period1N()
+        Period1N()
+            .environment(\.locale, Locale(identifier: "es"))
     }
 }
 

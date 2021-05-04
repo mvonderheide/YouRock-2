@@ -1,0 +1,39 @@
+/* 
+  Localizable.strings
+  YouRock2
+
+  Created by admin on 5/3/21.
+  
+*/
+"Welcome, Mr. Vonderheide!" = "¡Bienvenidos, Sr. Vonderheide!";
+"1st Period" = "Primer periodo";
+"2nd Period" = "Segundo período";
+"3rd Period" = "Tercer período";
+"4th Period" = "Cuarto período";
+"Recognize a Student" = "Dar reconocimiento a un estudiante";
+"View Student Data" = "Ver datos de los estudiantes";
+"Get Started, Mr. Vonderheide" = "¡Empecemos, Sr. Vonderheide!";
+"Teacher Mode" = "Vista del profesor";
+"Choose a Student" = "Elige un estudiante";
+"Choose a Category" = "Elige una categoría";
+"Relationship Skills" = "Habilidades de relación";
+"Responsible Decision-Making" = "Toma de decisiones responsable";
+"Self-Awareness" = "Conciencia de sí mismo";
+"Self-Management" = "Autogestión";
+"Social Awareness" = "Conciencia social";
+"Choose a Subcategory" = "Elige una subcategoría";
+"you managed your own emotions" = "manejaste tus propias emociones";
+"you used self-management strategies" = "usaste estrategias de autogestión";
+"you exhibited self-discipline and perseverance" = "exhibiste autodisciplina y perseverancia";
+"you set personal and collective goals" = "te pones metas personales y colectivas";
+"you used planning and organizational skills" = "usaste habilidades de planificación y organización";
+"you showed the courage to take initiative" = "mostraste el coraje para tomar la iniciativa";
+"First Name" = "Primer nombre";
+"Last Name" = "Apellido";
+"# of Rocks" = "# de rocas";
+"1st Period Rocks!" = "¡1er período Rocks!";
+"Choose a Classmate" = "Elige un compañero de clase";
+"Miguel, you rock because you exhibited self-discipline and perseverance!" = "Miguel, You
+Rock porque exhibiste autodisciplina y perseverancia";
+"Recognize another student" = "Dar reconocimiento a otro/a estudiante";
+

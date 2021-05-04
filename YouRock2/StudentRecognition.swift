@@ -48,6 +48,8 @@ struct StudentRecognition: View {
 struct StudentRecognition_Previews: PreviewProvider {
     static var previews: some View {
         StudentRecognition()
+        StudentRecognition()
+            .environment(\.locale, Locale(identifier: "es"))
     }
 }
 }
