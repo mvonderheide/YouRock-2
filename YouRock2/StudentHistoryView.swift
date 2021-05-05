@@ -44,7 +44,7 @@ struct StudentHistoryView: View {
             Text("App Dev with Swift")
                 .font(.title3)
                 .padding()
-            Text("Choose a Classmate")
+            Text("Recognize a Classmate")
             //NavigationLink(
             //   destination: ChooseCategory(),
             //    label: {

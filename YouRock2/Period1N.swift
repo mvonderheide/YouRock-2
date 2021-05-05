@@ -33,7 +33,7 @@ struct Period1N: View {
         var numRocks : Int
     }
     
-    var student1 : Student = Student(firstName: "Miguel", lastName: "Sanchez", numRocks: 4)
+    //var student1 : Student = Student(firstName: "Miguel", lastName: "Sanchez", numRocks: 4)
     
     var body: some View {
         
