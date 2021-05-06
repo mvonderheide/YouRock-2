@@ -16,6 +16,8 @@ import AppDevWithSwiftLibrary
  */
 struct ContentView: View {
     
+    
+    
     struct Teacher : Hashable {
         var id = UUID()
         var prefix : String
@@ -68,8 +70,10 @@ struct ContentView: View {
     @State var isTeacherMode = true
     
     var body: some View {
-        let _ : [Class] = teacher1.classes
+        
+        
         NavigationView {
+            
             VStack {
                 Image("youRock")
                     .resizable()
@@ -108,6 +112,7 @@ struct ContentView: View {
                     Text("Teacher Mode")
                 }).frame(width: 200)
                 
+                
             }
             
             
@@ -126,11 +131,12 @@ struct ContentView: View {
             }
         }
         
+        let _ : [Class] = teacher1.classes
+        
+        
     }
     
 }
-
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

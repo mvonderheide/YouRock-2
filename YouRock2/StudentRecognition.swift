@@ -11,45 +11,66 @@ import AppDevWithSwiftLibrary
 struct StudentRecognition: View {
     var body: some View {
         
-        VStack {
+        TabView {
             
-            Text("Miguel, you rock because you exhibited self-discipline and perseverance!")
             
-            Image("Perseverance2")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 350)
-                .padding(100)
+            VStack {
+                
+                Text("Miguel, you rock because you exhibited self-discipline and perseverance!")
+                    .padding()
+                
+                Image("Perseverance2")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 350)
+                    .padding(100)
+                
+            }
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    HStack {
+                        Image("youRock")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 50
+                            )
+                            .padding(100)
+                    }
+                    
+                }
+            }.tabItem{
+                Image(systemName: "hand.thumbsup")
+                Text("Student Recognition")
+            }
             
-            NavigationLink(
-                destination: Period1N(),
-                label: {
-                    Text("Recognize another student")
-                })
+            ContentView()
+                .tabItem {
+                    Image(systemName: "house")
+                    Text("Home")
+                }
             
-        }
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .principal) {
-                        HStack {
-                            Image("youRock")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 50
-                                )
-                                .padding(100)
+            WelcomeScreen2()
+                .tabItem {
+                    Image(systemName: "hand.wave")
+                    Text("Welcome")
+                    
+                }
+            
+            Period1N()
+                .tabItem {
+                    Image(systemName: "person.3")
+                    Text("Period 1")
+                }
         }
         
-                    }
+    }
+    struct StudentRecognition_Previews: PreviewProvider {
+        static var previews: some View {
+            StudentRecognition()
+            StudentRecognition()
+                .environment(\.locale, Locale(identifier: "es"))
+        }
     }
 }
 
-
-struct StudentRecognition_Previews: PreviewProvider {
-    static var previews: some View {
-        StudentRecognition()
-        StudentRecognition()
-            .environment(\.locale, Locale(identifier: "es"))
-    }
-}
-}

@@ -37,71 +37,96 @@ struct Period1N: View {
     
     var body: some View {
         
-        VStack {
-            Spacer()
-            Text("1st Period")
-                .font(.title)
-            Text("App Dev with Swift")
-                .font(.title3)
-                .padding()
-            Text("Choose a Student")
-            //NavigationLink(
-            //   destination: ChooseCategory(),
-            //    label: {
-            //     Text(student1.firstName + " " + student1.lastName)
-            //  })
-            
-            //Drop down menu starts here (includes frameworks and state variable)
-            Picker(selection: $selectedFrameworkIndex, label: Text("")) {
-                ForEach(0 ..< frameworks.count) {
-                    Text(self.frameworks[$0])
+        TabView {
+            VStack {
+                Spacer()
+                Text("1st Period")
+                    .font(.title)
+                Text("App Dev with Swift")
+                    .font(.title3)
+                    .padding()
+                Text("Choose a Student")
+                //NavigationLink(
+                //   destination: ChooseCategory(),
+                //    label: {
+                //     Text(student1.firstName + " " + student1.lastName)
+                //  })
+                
+                //Drop down menu starts here (includes frameworks and state variable)
+                Picker(selection: $selectedFrameworkIndex, label: Text("")) {
+                    ForEach(0 ..< frameworks.count) {
+                        Text(self.frameworks[$0])
+                    }
                 }
+                NavigationLink(
+                    destination: ChooseCategory(),
+                    label: {
+                        Text("\(frameworks[selectedFrameworkIndex])")
+                    })
+                
+                
+                
+                Image("rockWall1")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 500)
+                    .padding(50)
+                
+                NavigationLink(
+                    destination: WelcomeScreen2(),
+                    label: {
+                        Text("Start Over")
+                    })
             }
-            NavigationLink(
-                destination: ChooseCategory(),
-                label: {
-                    Text("\(frameworks[selectedFrameworkIndex])")
-                })
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    HStack {
+                        Image("youRock")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 50
+                            )
+                            .padding(100)
+                        
+                    }
+                }
+                
+            }.tabItem{
+                Image(systemName: "person.3")
+                Text("Period 1")
+            }
             
+            ContentView()
+                .tabItem {
+                    Image(systemName: "house")
+                    Text("Home")
+                }
             
-            
-            Image("rockWall1")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 500)
-                .padding(50)
-            
-            NavigationLink(
-                destination: WelcomeScreen2(),
-                label: {
-                    Text("Start Over")
-                })
-        }
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .principal) {
-                HStack {
-                    Image("youRock")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 50
-                        )
-                        .padding(100)
+            WelcomeScreen2()
+                .tabItem {
+                    Image(systemName: "hand.wave")
+                    Text("Welcome")
                     
                 }
-            }
+            
+            Data1N()
+                .tabItem {
+                    Image(systemName: "folder")
+                    Text("Period 1 Data")
+                }
         }
     }
-}
-
-
-struct Period1N_Previews: PreviewProvider {
-    static var previews: some View {
-        Period1N()
-        Period1N()
-            .environment(\.locale, Locale(identifier: "es"))
+    
+    
+    struct Period1N_Previews: PreviewProvider {
+        static var previews: some View {
+            Period1N()
+            Period1N()
+                .environment(\.locale, Locale(identifier: "es"))
+        }
     }
+    
+    
+    
 }
-
-
-
