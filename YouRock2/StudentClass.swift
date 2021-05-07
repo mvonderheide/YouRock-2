@@ -21,7 +21,7 @@ import AppDevWithSwiftLibrary
  Image rockWall
  
  */
-struct Period1N: View {
+struct StudentClass: View {
     var frameworks = ["Daniel Bang", "Smadar Bergman", "Mia Harris", "Kevin McQuown", "Miguel Sanchez", "Dimitri Villalobos"]
     
     @State private var selectedFrameworkIndex = 0
@@ -37,32 +37,30 @@ struct Period1N: View {
     
     var body: some View {
         
-        TabView {
-            
-            VStack {
-                Spacer()
-                ZStack {
-                    Rectangle()
-                        .foregroundColor(.white)
-                        .shadow(radius: 5)
-                        .frame(height: 100)
-                    
-                    VStack { Text("1st Period")
-                        .font(.title)
-                        Text("App Dev with Swift")
-                            .font(.title3)
-                            .padding()
-                    }
-                   
+        VStack {
+            Spacer()
+            ZStack {
+                Rectangle()
+                    .foregroundColor(.white)
+                    .shadow(radius: 5)
+                    .frame(height: 100)
+                
+                VStack { Text("1st Period")
+                    .font(.title)
+                    Text("App Dev with Swift")
+                        .font(.title3)
+                        .padding()
                 }
-                Spacer()
-                ZStack {
-                    Rectangle()
-                        .foregroundColor(.white)
-                        .shadow(radius: 5)
-                        .frame(height: 50)
-                Text("Choose a Student")
-                }
+               
+            }
+            Spacer()
+            ZStack {
+                Rectangle()
+                    .foregroundColor(.white)
+                    .shadow(radius: 5)
+                    .frame(height: 50)
+            Text("Choose a Classmate")
+            }
                 //NavigationLink(
                 //   destination: ChooseCategory(),
                 //    label: {
@@ -81,7 +79,7 @@ struct Period1N: View {
                         Text("\(frameworks[selectedFrameworkIndex])")
                     })
                 
-                    Spacer()
+Spacer()
             }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -108,30 +106,30 @@ struct Period1N: View {
                     Text("Home")
                 }
             
-            WelcomeScreen2()
+            StudentHistoryView()
                 .tabItem {
                     Image(systemName: "hand.wave")
                     Text("Welcome")
                     
                 }
             
-            Data1N()
+            RockWall()
                 .tabItem {
-                    Image(systemName: "folder")
-                    Text("Period 1 Data")
+                    Image(systemName: "triangle")
+                    Text("Rock Wall")
                 }
         }
     }
     
     
-    struct Period1N_Previews: PreviewProvider {
+    struct StudentClass_Previews: PreviewProvider {
         static var previews: some View {
-            Period1N()
-            Period1N()
+            StudentClass()
+            StudentClass()
                 .environment(\.locale, Locale(identifier: "es"))
         }
     }
     
     
     
-}
+

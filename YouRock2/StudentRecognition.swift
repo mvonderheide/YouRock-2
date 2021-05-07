@@ -16,7 +16,15 @@ struct StudentRecognition: View {
             
             VStack {
                 
-                Text("Miguel, you rock because you exhibited self-discipline and perseverance!")
+                ZStack {
+                    Rectangle()
+                        .foregroundColor(.white)
+                        .shadow(radius: 5)
+                        .frame(height: 100)
+                    Text("Miguel, you rock because you exhibited self-discipline and perseverance!")
+                    
+                }
+                
                     .padding()
                 
                 Image("Perseverance2")

@@ -16,8 +16,7 @@ import AppDevWithSwiftLibrary
  */
 struct ContentView: View {
     
-    
-    
+
     struct Teacher : Hashable {
         var id = UUID()
         var prefix : String
@@ -75,6 +74,7 @@ struct ContentView: View {
         NavigationView {
             
             VStack {
+                Spacer()
                 Image("youRock")
                     .resizable()
                     .scaledToFit()
@@ -86,27 +86,18 @@ struct ContentView: View {
                         destination: WelcomeScreen2(),
                         label: {
                             Text("Get Started, " + teacher1.prefix + " " + teacher1.lastName)
-                                .padding(5)
-                                .background(Color.blue)
-                                .cornerRadius(8)
-                                .foregroundColor(.white)
-                                .padding(5)
-                                .font(.system(size: 25))
+                                .font(.system(size: 20))
                         })
                     Spacer()
                 } else {
                     NavigationLink(
                         destination: StudentHistoryView(),
                         label: {
-                            Text("Student History View").padding(5)
-                                .background(Color.blue)
-                                .cornerRadius(8)
-                                .foregroundColor(.white)
-                                .padding(5)
-                                .font(.system(size: 25))
+                            Text("Get Started, Miguel").padding(5)
+                                .font(.system(size: 20))
                             
                         })
-                    Spacer()
+                  
                 }
                 Toggle(isOn: $isTeacherMode, label: {
                     Text("Teacher Mode")
@@ -116,19 +107,6 @@ struct ContentView: View {
             }
             
             
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .principal) {
-                    HStack {
-                        Image("youRock")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 50)
-                            .padding(100)
-                        
-                    }
-                }
-            }
         }
         
         let _ : [Class] = teacher1.classes

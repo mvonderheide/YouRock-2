@@ -30,72 +30,91 @@ struct ChooseCategory: View {
                 Text("Choose a Category")
                     .font(.title)
                 
-                NavigationLink(
-                    destination: Text("RelationshipSkills"),
-                    label: {
-                        
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 5)
-                                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                                .frame(width: bWidth, height: bHeight)
+                ZStack {
+                    Rectangle()
+                        .foregroundColor(.white)
+                        .shadow(radius: 5)
+                        .frame(height: 100)
+                    
+                
+                    NavigationLink(
+                        destination: Text("Relationship Skills"),
+                        label: {
                             Text("Relationship Skills")
-                                .foregroundColor(.white)
+                                .padding()
+                                .foregroundColor(.blue)
                             
+                        })
+                    
+                }
+                
+                ZStack {
+                    Rectangle()
+                        .foregroundColor(.white)
+                        .shadow(radius: 5)
+                        .frame(height: 100)
+                    NavigationLink(
+                        destination: Text("ResponsibleDecisionMaking"),
+                        label: {
                             
-                        }
-                        
-                    })
-                NavigationLink(
-                    destination: Text("ResponsibleDecisionMaking"),
-                    label: {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 5)
-                                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                                .frame(width: bWidth, height: bHeight)
                             Text("Responsible Decision-Making")
-                                .foregroundColor(.white)
+                                .padding()
+                                .foregroundColor(.blue)
                             
-                        }
-                    })
-                NavigationLink(
-                    destination: Text("SelfAwareness"),
-                    label: {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 5)
-                                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                                .frame(width: bWidth, height: bHeight)
+                            
+                        })
+                    
+                }
+                
+                ZStack {
+                    Rectangle()
+                        .foregroundColor(.white)
+                        .shadow(radius: 5)
+                        .frame(height: 100)
+                    NavigationLink(
+                        destination: Text("SelfAwareness"),
+                        label: {
                             Text("Self-Awareness")
-                                .foregroundColor(.white)
+                                .padding()
+                                .foregroundColor(.blue)
+                        })
+                    
+                }
+                
+                ZStack {
+                    Rectangle()
+                        .foregroundColor(.white)
+                        .shadow(radius: 5)
+                        .frame(height: 100)
+                    NavigationLink(
+                        destination: SelfManagement(),
+                        label: {
                             
-                        }
-                    })
-                NavigationLink(
-                    destination: SelfManagement(),
-                    label: {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 5)
-                                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                                .frame(width: bWidth, height: bHeight)
                             Text("Self-Management")
-                                .foregroundColor(.white)
+                                .padding()
+                                .foregroundColor(.blue)
                             
-                        }
-                        
-                    })
-                NavigationLink(
-                    destination: Text("SocialAwareness"),
-                    label: {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 5)
-                                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                                .frame(width: bWidth, height: bHeight)
+                        })
+                    
+                }
+                
+                ZStack {
+                    Rectangle()
+                        .foregroundColor(.white)
+                        .shadow(radius: 5)
+                        .frame(height: 100)
+                    NavigationLink(
+                        destination: Text("SocialAwareness"),
+                        label: {
+                            
                             Text("Social Awareness")
-                                .foregroundColor(.white)
+                                .padding()
+                                .foregroundColor(.blue)
                             
-                        }
-                    })
+                        })
+                    
+                }
             }
-            
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .principal) {

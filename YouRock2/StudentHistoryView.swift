@@ -36,65 +36,71 @@ struct StudentHistoryView: View {
     var student1 : Student = Student(firstName: "Miguel", lastName: "Sanchez", numRocks: 4)
     
     var body: some View {
-        
-        VStack {
-            Spacer()
-            Text("1st Period")
-                .font(.title)
-            Text("App Dev with Swift")
-                .font(.title3)
-                .padding()
-            Text("Recognize a Classmate")
-            //NavigationLink(
-            //   destination: ChooseCategory(),
-            //    label: {
-            //     Text(student1.firstName + " " + student1.lastName)
-            //  })
-            
-            //Drop down menu starts here (includes frameworks and state variable)
-            Picker(selection: $selectedFrameworkIndex, label: Text("")) {
-                ForEach(0 ..< frameworks.count) {
-                    Text(self.frameworks[$0])
-                }
+        TabView {
+            VStack {
+                Spacer()
+                Text("Hi Miguel!")
+                    .font(.title)
+                Text("You Rock!")
+                    .font(.title3)
+                    .padding()
+                Text("You have earned 6 rocks!")
+                
+                Image("studentHistory")
+                    .resizable()
+                    .scaledToFit()
+                    .padding()
+                
+                Spacer()
+                
             }
-            NavigationLink(
-                destination: ChooseCategory(),
-                label: {
-                    Text("\(frameworks[selectedFrameworkIndex])")
-                  
-                })
-        Spacer()
-            NavigationLink(
-                destination: WelcomeScreen2(),
-                label: {
-                    Text("Start Over")
-                })
-        }
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .principal) {
-                HStack {
-                    Image("youRock")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 50
-                        )
-                        .padding(100)
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    HStack {
+                        Image("youRock")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 50
+                            )
+                            .padding(100)
+                        
+                    }
+                }
+            }.tabItem{
+                Image(systemName: "folder")
+                Text("Period 1")
+            }
+            
+            ContentView()
+                .tabItem {
+                    Image(systemName: "house")
+                    Text("Home")
+                }
+            
+            WelcomeScreen2()
+                .tabItem {
+                    Image(systemName: "person.3")
+                    Text("My Class")
                     
                 }
-            }
+            
+            Data1N()
+                .tabItem {
+                    Image(systemName: "triangle")
+                    Text("Rock Wall")
+                }
         }
     }
-}
-
-
-struct StudentHistoryView_Previews: PreviewProvider {
-    static var previews: some View {
-        StudentHistoryView()
-        StudentHistoryView()
-            .environment(\.locale, Locale(identifier: "es"))
+    
+    struct StudentHistoryView_Previews: PreviewProvider {
+        static var previews: some View {
+            StudentHistoryView()
+            StudentHistoryView()
+                .environment(\.locale, Locale(identifier: "es"))
+        }
     }
+    
+    
+    
 }
-
-
-

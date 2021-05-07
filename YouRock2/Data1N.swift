@@ -52,25 +52,35 @@ struct Data1N: View {
         TabView {
             
             VStack {
+                ZStack {
+                    Rectangle()
+                        .foregroundColor(.white)
+                        .shadow(radius: 5)
+                        .frame(height: 50)
+                    Text("1st Period Rocks!")
+                        .font(.title)
+                }
                 
-                Text("1st Period Rocks!")
-                    .font(.title)
                 HStack{
+                    
                     ZStack {
-                        RoundedRectangle(cornerRadius: cornerRad)
-                            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .shadow(radius: 5)
                             .frame(width: width1, height: height1)
                         Text("First Name")
                     }
                     ZStack {
-                        RoundedRectangle(cornerRadius: cornerRad)
-                            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .shadow(radius: 5)
                             .frame(width: width2, height: height1)
                         Text("Last Name")
                     }
                     ZStack {
-                        RoundedRectangle(cornerRadius: cornerRad)
-                            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .shadow(radius: 5)
                             .frame(width: width3, height: height1)
                         Text("# of Rocks")
                         
@@ -79,40 +89,46 @@ struct Data1N: View {
                 
                 HStack{
                     ZStack {
-                        RoundedRectangle(cornerRadius: cornerRad)
-                            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .shadow(radius: 5)
                             .frame(width: width1, height: height1)
                         Text(student1.firstName + " ")
                     }
                     ZStack {
-                        RoundedRectangle(cornerRadius: cornerRad)
-                            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .shadow(radius: 5)
                             .frame(width: width2, height: height1)
                         Text(student1.lastName + " ")
                     }
                     ZStack {
-                        RoundedRectangle(cornerRadius: cornerRad)
-                            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .shadow(radius: 5)
                             .frame(width: width3, height: height1)
                         Text(String(student1.numRocks))
                     }
                 }
                 HStack{
                     ZStack {
-                        RoundedRectangle(cornerRadius: cornerRad)
-                            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .shadow(radius: 5)
                             .frame(width: width1, height: height1)
                         Text(student2.firstName + " ")
                     }
                     ZStack {
-                        RoundedRectangle(cornerRadius: cornerRad)
-                            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .shadow(radius: 5)
                             .frame(width: width2, height: height1)
                         Text(student2.lastName + " ")
                     }
                     ZStack {
-                        RoundedRectangle(cornerRadius: cornerRad)
-                            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .shadow(radius: 5)
                             .frame(width: width3, height: height1)
                         Text(String(student2.numRocks))
                     }
@@ -120,20 +136,23 @@ struct Data1N: View {
                 
                 HStack{
                     ZStack {
-                        RoundedRectangle(cornerRadius: cornerRad)
-                            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .shadow(radius: 5)
                             .frame(width: width1, height: height1)
                         Text(student3.firstName + " ")
                     }
                     ZStack {
-                        RoundedRectangle(cornerRadius: cornerRad)
-                            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .shadow(radius: 5)
                             .frame(width: width2, height: height1)
                         Text(student3.lastName + " ")
                     }
                     ZStack {
-                        RoundedRectangle(cornerRadius: cornerRad)
-                            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .shadow(radius: 5)
                             .frame(width: width3, height: height1)
                         Text(String(student3.numRocks))
                     }
@@ -141,20 +160,23 @@ struct Data1N: View {
                 
                 HStack{
                     ZStack {
-                        RoundedRectangle(cornerRadius: cornerRad)
-                            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .shadow(radius: 5)
                             .frame(width: width1, height: height1)
                         Text(student4.firstName + " ")
                     }
                     ZStack {
-                        RoundedRectangle(cornerRadius: cornerRad)
-                            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .shadow(radius: 5)
                             .frame(width: width2, height: height1)
                         Text(student4.lastName + " ")
                     }
                     ZStack {
-                        RoundedRectangle(cornerRadius: cornerRad)
-                            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .shadow(radius: 5)
                             .frame(width: width3, height: height1)
                         Text(String(student4.numRocks))
                     }
@@ -162,20 +184,23 @@ struct Data1N: View {
                 
                 HStack{
                     ZStack {
-                        RoundedRectangle(cornerRadius: cornerRad)
-                            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .shadow(radius: 5)
                             .frame(width: width1, height: height1)
                         Text(student5.firstName + " ")
                     }
                     ZStack {
-                        RoundedRectangle(cornerRadius: cornerRad)
-                            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .shadow(radius: 5)
                             .frame(width: width2, height: height1)
                         Text(student5.lastName + " ")
                     }
                     ZStack {
-                        RoundedRectangle(cornerRadius: cornerRad)
-                            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .shadow(radius: 5)
                             .frame(width: width3, height: height1)
                         Text(String(student5.numRocks))
                     }
@@ -183,34 +208,28 @@ struct Data1N: View {
                 
                 HStack{
                     ZStack {
-                        RoundedRectangle(cornerRadius: cornerRad)
-                            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .shadow(radius: 5)
                             .frame(width: width1, height: height1)
                         Text(student6.firstName + " ")
                     }
                     ZStack {
-                        RoundedRectangle(cornerRadius: cornerRad)
-                            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .shadow(radius: 5)
                             .frame(width: width2, height: height1)
                         Text(student6.lastName + " ")
                     }
                     ZStack {
-                        RoundedRectangle(cornerRadius: cornerRad)
-                            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .shadow(radius: 5)
                             .frame(width: width3, height: height1)
                         Text(String(student6.numRocks))
                     }
                 }
                 
-                
-                
-                HStack{
-                    NavigationLink(
-                        destination: Period1N(),
-                        label: {
-                            Text("Start Over")
-                        })
-                }
             }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
