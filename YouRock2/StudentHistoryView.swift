@@ -36,56 +36,64 @@ struct StudentHistoryView: View {
     var student1 : Student = Student(firstName: "Miguel", lastName: "Sanchez", numRocks: 4)
     
     var body: some View {
-        TabView {
-            VStack {
-                Spacer()
-                Text("Hi Miguel!")
-                    .font(.title)
-                Text("You Rock!")
-                    .font(.title3)
-                    .padding()
-                Text("You have earned 6 rocks!")
-                
-                Image("studentHistory")
-                    .resizable()
-                    .scaledToFit()
-                    .padding()
-                
-                Spacer()
-                
-            }
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .principal) {
-                    HStack {
-                        Image("youRock")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 50
-                            )
-                            .padding(100)
-                    }
-                }
-            }.tabItem{
-                Image(systemName: "hand.wave")
-                Text("My Page")
-            }
-            ContentView()
-                .tabItem {
-                    Image(systemName: "house")
-                    Text("Home")
-                }
-            StudentClass()//Was Data1 and worked fine.  When changed to StudentClass it adds another Home button
-                .tabItem {
-                    Image(systemName: "person.3")
-                    Text("My Class")
-                }
+        
+        VStack {
+            Spacer()
+            Text("Hi Miguel!")
+                .font(.title)
+            Text("You Rock!")
+                .font(.title3)
+                .padding()
+            Text("You have earned 6 rocks!")
             
-            RockWall()
-                .tabItem {
-                    Image(systemName: "triangle")
-                    Text("Rock Wall")
+            Image("studentHistory")
+                .resizable()
+                .scaledToFit()
+                .padding()
+            
+            Spacer()
+            
+            ZStack {
+                Rectangle()
+                    .foregroundColor(.white)
+                    .shadow(radius: 5)
+                    .frame(height: 100)
+                HStack {
+                    NavigationLink(
+                        destination: StudentClass(),
+                        label: {
+                            Text("Recognize a Classmate")
+                                .padding()
+                                .frame(width: 200)
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.blue)
+                        })
+                    NavigationLink(
+                        destination: RockWall(),
+                        label: {
+                            Text("View the Rock Wall")
+                                .padding()
+                                .frame(width: 150)
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.blue)
+                            
+                        })
+                    
                 }
+            }
+        }
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                HStack {
+                    Image("youRock")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 50
+                        )
+                        .padding(100)
+                }
+            }
         }
     }
     
@@ -96,7 +104,6 @@ struct StudentHistoryView: View {
                 .environment(\.locale, Locale(identifier: "es"))
         }
     }
-    
-    
-    
 }
+
+

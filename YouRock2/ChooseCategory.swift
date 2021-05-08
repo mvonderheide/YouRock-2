@@ -25,61 +25,7 @@ struct ChooseCategory: View {
     let bHeight : CGFloat = 40
     
     var body: some View {
-        
-        TabView {
-            
-            SelfManagement()
-                .tabItem{
-                    Image(systemName: "list.bullet")
-                    Text("SEL Category")
-                }
-            
-            //            ContentView()
-            //                .tabItem {
-            //                    Image(systemName: "house")
-            //                    Text("Home")
-            //               }
-            
-            WelcomeScreen2()
-                .tabItem {
-                    Image(systemName: "hand.wave")
-                    Text("Welcome")
-                    
-                }
-            
-            Period1N()
-                .tabItem {
-                    Image(systemName: "person.3")
-                    Text("Period 1")
-                    
-                }
-        }
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .principal) {
-                HStack {
-                    Image("youRock")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 50)
-                        .padding(100)
-                    
-                }
-            }
-        }
-    }
-    struct ChooseCategory_Previews: PreviewProvider {
-        static var previews: some View {
-            ChooseCategory()
-            ChooseCategory()
-                .environment(\.locale, Locale(identifier: "es"))
-        }
-    }
     
-    struct ChooseCategoryView: View {
-        
-        var body: some View {
-            
             VStack {
                 Text("Choose a Category")
                     .font(.title)
@@ -89,6 +35,7 @@ struct ChooseCategory: View {
                         .foregroundColor(.white)
                         .shadow(radius: 5)
                         .frame(height: 100)
+                    
                     
                     NavigationLink(
                         destination: Text("Relationship Skills"),
@@ -112,6 +59,8 @@ struct ChooseCategory: View {
                             Text("Responsible Decision-Making")
                                 .padding()
                                 .foregroundColor(.blue)
+                            
+                            
                         })
                 }
                 
@@ -161,6 +110,27 @@ struct ChooseCategory: View {
                         })
                 }
             }
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    HStack {
+                        Image("youRock")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 50
+                            )
+                            .padding(100)
+                        
+                    }
+                }
+            }
+        }
+    struct ChooseCategory_Previews: PreviewProvider {
+            static var previews: some View {
+                ChooseCategory()
+                ChooseCategory()
+                    .environment(\.locale, Locale(identifier: "es"))
+            }
         }
     }
-}
+

@@ -37,68 +37,65 @@ struct Period1N: View {
     //var student1 : Student = Student(firstName: "Miguel", lastName: "Sanchez", numRocks: 4)
     
     var body: some View {
-                    
-            VStack {
-                Spacer()
-                ZStack {
-                    Rectangle()
-                        .foregroundColor(.white)
-                        .shadow(radius: 5)
-                        .frame(height: 100)
-                    
-                    VStack { Text("1st Period")
-                        .font(.title)
-                        Text("App Dev with Swift")
-                            .font(.title3)
-                            .padding()
-                    }
-                   
-                }
-                Spacer()
-                ZStack {
-                    Rectangle()
-                        .foregroundColor(.white)
-                        .shadow(radius: 5)
-                        .frame(height: 50)
-                Text("Choose a Student")
-                }
-                //NavigationLink(
-                //   destination: ChooseCategory(),
-                //    label: {
-                //     Text(student1.firstName + " " + student1.lastName)
-                //  })
-                
-                //Drop down menu starts here (includes frameworks and state variable)
-                Picker(selection: $selectedFrameworkIndex, label: Text("")) {
-                    ForEach(0 ..< frameworks.count) {
-                        Text(self.frameworks[$0])
-                    }
-                }
-                NavigationLink(
-                    destination: ChooseCategory(),
-                    label: {
-                        Text("\(frameworks[selectedFrameworkIndex])")
-                    })
-                
-                    Spacer()
-            }
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .principal) {
-                    HStack {
-                        Image("youRock")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 50
-                            )
-                            .padding(100)
-                        
-                    }
-                }
-                
-            }
-            
         
+        VStack {
+            Spacer()
+            ZStack {
+                Rectangle()
+                    .foregroundColor(.white)
+                    .shadow(radius: 5)
+                    .frame(height: 100)
+                
+                VStack { Text("1st Period")
+                    .font(.title)
+                    Text("App Dev with Swift")
+                        .font(.title3)
+                        .padding()
+                }
+                
+            }
+            Spacer()
+            ZStack {
+                Rectangle()
+                    .foregroundColor(.white)
+                    .shadow(radius: 5)
+                    .frame(height: 50)
+                Text("Choose a Student")
+            }
+            //NavigationLink(
+            //   destination: ChooseCategory(),
+            //    label: {
+            //     Text(student1.firstName + " " + student1.lastName)
+            //  })
+            
+            //Drop down menu starts here (includes frameworks and state variable)
+            Picker(selection: $selectedFrameworkIndex, label: Text("")) {
+                ForEach(0 ..< frameworks.count) {
+                    Text(self.frameworks[$0])
+                }
+            }
+            NavigationLink(
+                destination: ChooseCategory(),
+                label: {
+                    Text("\(frameworks[selectedFrameworkIndex])")
+                })
+            
+            Spacer()
+        }
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                HStack {
+                    Image("youRock")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 50
+                        )
+                        .padding(100)
+                    
+                }
+            }
+        }
     }
     
     
@@ -109,7 +106,4 @@ struct Period1N: View {
                 .environment(\.locale, Locale(identifier: "es"))
         }
     }
-    
-    
-    
 }

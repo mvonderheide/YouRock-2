@@ -11,65 +11,39 @@ import AppDevWithSwiftLibrary
 struct StudentRecognition: View {
     var body: some View {
         
-        TabView {
+        VStack {
             
-            
-            VStack {
-                
-                ZStack {
-                    Rectangle()
-                        .foregroundColor(.white)
-                        .shadow(radius: 5)
-                        .frame(height: 100)
-                    Text("Miguel, you rock because you exhibited self-discipline and perseverance!")
-                    
-                }
-                
-                    .padding()
-                
-                Image("Perseverance2")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 350)
-                    .padding(100)
+            ZStack {
+                Rectangle()
+                    .foregroundColor(.white)
+                    .shadow(radius: 5)
+                    .frame(height: 100)
+                Text("Miguel, you rock because you exhibited self-discipline and perseverance!")
                 
             }
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .principal) {
-                    HStack {
-                        Image("youRock")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 50
-                            )
-                            .padding(100)
-                    }
-                    
+            
+            .padding()
+            
+            Image("Perseverance2")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 350)
+                .padding(100)
+            
+        }
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                HStack {
+                    Image("youRock")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 50
+                        )
+                        .padding(100)
                 }
-            }.tabItem{
-                Image(systemName: "hand.thumbsup")
-                Text("Student Recognition")
+                
             }
-            
-            ContentView()
-                .tabItem {
-                    Image(systemName: "house")
-                    Text("Home")
-                }
-            
-            WelcomeScreen2()
-                .tabItem {
-                    Image(systemName: "hand.wave")
-                    Text("Welcome")
-                    
-                }
-            
-            Period1N()
-                .tabItem {
-                    Image(systemName: "person.3")
-                    Text("Period 1")
-                }
         }
         
     }

@@ -51,7 +51,7 @@ struct StudentClass: View {
                         .font(.title3)
                         .padding()
                 }
-               
+                
             }
             Spacer()
             ZStack {
@@ -59,77 +59,53 @@ struct StudentClass: View {
                     .foregroundColor(.white)
                     .shadow(radius: 5)
                     .frame(height: 50)
-            Text("Choose a Classmate")
+                Text("Choose a Classmate")
             }
-                //NavigationLink(
-                //   destination: ChooseCategory(),
-                //    label: {
-                //     Text(student1.firstName + " " + student1.lastName)
-                //  })
-                
-                //Drop down menu starts here (includes frameworks and state variable)
-                Picker(selection: $selectedFrameworkIndex, label: Text("")) {
-                    ForEach(0 ..< frameworks.count) {
-                        Text(self.frameworks[$0])
-                    }
-                }
-                NavigationLink(
-                    destination: ChooseCategory(),
-                    label: {
-                        Text("\(frameworks[selectedFrameworkIndex])")
-                    })
-                
-Spacer()
-            }
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .principal) {
-                    HStack {
-                        Image("youRock")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 50
-                            )
-                            .padding(100)
-                        
-                    }
-                }
-                
-            }.tabItem{
-                Image(systemName: "person.3")
-                Text("Period 1")
-            }
+            //NavigationLink(
+            //   destination: ChooseCategory(),
+            //    label: {
+            //     Text(student1.firstName + " " + student1.lastName)
+            //  })
             
-            ContentView()
-                .tabItem {
-                    Image(systemName: "house")
-                    Text("Home")
+            //Drop down menu starts here (includes frameworks and state variable)
+            Picker(selection: $selectedFrameworkIndex, label: Text("")) {
+                ForEach(0 ..< frameworks.count) {
+                    Text(self.frameworks[$0])
                 }
+            }
+            NavigationLink(
+                destination: ChooseCategory(),
+                label: {
+                    Text("\(frameworks[selectedFrameworkIndex])")
+                })
             
-            StudentHistoryView()
-                .tabItem {
-                    Image(systemName: "hand.wave")
-                    Text("Welcome")
+            Spacer()
+        }
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                HStack {
+                    Image("youRock")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 50
+                        )
+                        .padding(100)
                     
                 }
+            }
             
-            RockWall()
-                .tabItem {
-                    Image(systemName: "triangle")
-                    Text("Rock Wall")
-                }
         }
     }
-    
-    
-    struct StudentClass_Previews: PreviewProvider {
-        static var previews: some View {
-            StudentClass()
-            StudentClass()
-                .environment(\.locale, Locale(identifier: "es"))
-        }
+
+struct StudentClass_Previews: PreviewProvider {
+    static var previews: some View {
+        StudentClass()
+        StudentClass()
+            .environment(\.locale, Locale(identifier: "es"))
     }
-    
-    
-    
+}
+
+}
+
 
