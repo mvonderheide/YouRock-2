@@ -26,12 +26,12 @@ struct RockWall: View {
                             .padding(100)
                     }
                 }
+            }
     }
-}
-
-struct RockWall_Previews: PreviewProvider {
-    static var previews: some View {
-        RockWall()
+    
+    struct RockWall_Previews: PreviewProvider {
+        static var previews: some View {
+            RockWall()
+        }
     }
-}
 }

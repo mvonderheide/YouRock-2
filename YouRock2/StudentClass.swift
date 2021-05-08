@@ -97,15 +97,15 @@ struct StudentClass: View {
             
         }
     }
-
-struct StudentClass_Previews: PreviewProvider {
-    static var previews: some View {
-        StudentClass()
-        StudentClass()
-            .environment(\.locale, Locale(identifier: "es"))
+    
+    struct StudentClass_Previews: PreviewProvider {
+        static var previews: some View {
+            StudentClass()
+            StudentClass()
+                .environment(\.locale, Locale(identifier: "es"))
+        }
     }
-}
-
+    
 }
 
 

@@ -25,112 +25,112 @@ struct ChooseCategory: View {
     let bHeight : CGFloat = 40
     
     var body: some View {
-    
-            VStack {
-                Text("Choose a Category")
-                    .font(.title)
+        
+        VStack {
+            Text("Choose a Category")
+                .font(.title)
+            
+            ZStack {
+                Rectangle()
+                    .foregroundColor(.white)
+                    .shadow(radius: 5)
+                    .frame(height: 100)
                 
-                ZStack {
-                    Rectangle()
-                        .foregroundColor(.white)
-                        .shadow(radius: 5)
-                        .frame(height: 100)
-                    
-                    
-                    NavigationLink(
-                        destination: Text("Relationship Skills"),
-                        label: {
-                            Text("Relationship Skills")
-                                .padding()
-                                .foregroundColor(.blue)
-                            
-                        })
-                }
                 
-                ZStack {
-                    Rectangle()
-                        .foregroundColor(.white)
-                        .shadow(radius: 5)
-                        .frame(height: 100)
-                    NavigationLink(
-                        destination: Text("ResponsibleDecisionMaking"),
-                        label: {
-                            
-                            Text("Responsible Decision-Making")
-                                .padding()
-                                .foregroundColor(.blue)
-                            
-                            
-                        })
-                }
-                
-                ZStack {
-                    Rectangle()
-                        .foregroundColor(.white)
-                        .shadow(radius: 5)
-                        .frame(height: 100)
-                    NavigationLink(
-                        destination: Text("SelfAwareness"),
-                        label: {
-                            Text("Self-Awareness")
-                                .padding()
-                                .foregroundColor(.blue)
-                        })
-                }
-                
-                ZStack {
-                    Rectangle()
-                        .foregroundColor(.white)
-                        .shadow(radius: 5)
-                        .frame(height: 100)
-                    NavigationLink(
-                        destination: SelfManagement(),
-                        label: {
-                            
-                            Text("Self-Management")
-                                .padding()
-                                .foregroundColor(.blue)
-                            
-                        })
-                }
-                
-                ZStack {
-                    Rectangle()
-                        .foregroundColor(.white)
-                        .shadow(radius: 5)
-                        .frame(height: 100)
-                    NavigationLink(
-                        destination: Text("SocialAwareness"),
-                        label: {
-                            
-                            Text("Social Awareness")
-                                .padding()
-                                .foregroundColor(.blue)
-                            
-                        })
-                }
-            }
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .principal) {
-                    HStack {
-                        Image("youRock")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 50
-                            )
-                            .padding(100)
+                NavigationLink(
+                    destination: Text("Relationship Skills"),
+                    label: {
+                        Text("Relationship Skills")
+                            .padding()
+                            .foregroundColor(.blue)
                         
-                    }
-                }
+                    })
+            }
+            
+            ZStack {
+                Rectangle()
+                    .foregroundColor(.white)
+                    .shadow(radius: 5)
+                    .frame(height: 100)
+                NavigationLink(
+                    destination: Text("ResponsibleDecisionMaking"),
+                    label: {
+                        
+                        Text("Responsible Decision-Making")
+                            .padding()
+                            .foregroundColor(.blue)
+                        
+                        
+                    })
+            }
+            
+            ZStack {
+                Rectangle()
+                    .foregroundColor(.white)
+                    .shadow(radius: 5)
+                    .frame(height: 100)
+                NavigationLink(
+                    destination: Text("SelfAwareness"),
+                    label: {
+                        Text("Self-Awareness")
+                            .padding()
+                            .foregroundColor(.blue)
+                    })
+            }
+            
+            ZStack {
+                Rectangle()
+                    .foregroundColor(.white)
+                    .shadow(radius: 5)
+                    .frame(height: 100)
+                NavigationLink(
+                    destination: SelfManagement(),
+                    label: {
+                        
+                        Text("Self-Management")
+                            .padding()
+                            .foregroundColor(.blue)
+                        
+                    })
+            }
+            
+            ZStack {
+                Rectangle()
+                    .foregroundColor(.white)
+                    .shadow(radius: 5)
+                    .frame(height: 100)
+                NavigationLink(
+                    destination: Text("SocialAwareness"),
+                    label: {
+                        
+                        Text("Social Awareness")
+                            .padding()
+                            .foregroundColor(.blue)
+                        
+                    })
             }
         }
-    struct ChooseCategory_Previews: PreviewProvider {
-            static var previews: some View {
-                ChooseCategory()
-                ChooseCategory()
-                    .environment(\.locale, Locale(identifier: "es"))
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                HStack {
+                    Image("youRock")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 50
+                        )
+                        .padding(100)
+                    
+                }
             }
         }
     }
+    struct ChooseCategory_Previews: PreviewProvider {
+        static var previews: some View {
+            ChooseCategory()
+            ChooseCategory()
+                .environment(\.locale, Locale(identifier: "es"))
+        }
+    }
+}
 
