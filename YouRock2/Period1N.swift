@@ -22,6 +22,7 @@ import AppDevWithSwiftLibrary
  
  */
 struct Period1N: View {
+    
     var frameworks = ["Daniel Bang", "Smadar Bergman", "Mia Harris", "Kevin McQuown", "Miguel Sanchez", "Dimitri Villalobos"]
     
     @State private var selectedFrameworkIndex = 0
@@ -36,9 +37,7 @@ struct Period1N: View {
     //var student1 : Student = Student(firstName: "Miguel", lastName: "Sanchez", numRocks: 4)
     
     var body: some View {
-        
-        TabView {
-            
+                    
             VStack {
                 Spacer()
                 ZStack {
@@ -97,30 +96,9 @@ struct Period1N: View {
                     }
                 }
                 
-            }.tabItem{
-                Image(systemName: "person.3")
-                Text("Period 1")
             }
             
-            ContentView()
-                .tabItem {
-                    Image(systemName: "house")
-                    Text("Home")
-                }
-            
-            WelcomeScreen2()
-                .tabItem {
-                    Image(systemName: "hand.wave")
-                    Text("Welcome")
-                    
-                }
-            
-            Data1N()
-                .tabItem {
-                    Image(systemName: "folder")
-                    Text("Period 1 Data")
-                }
-        }
+        
     }
     
     

@@ -16,7 +16,7 @@ import AppDevWithSwiftLibrary
  */
 struct ContentView: View {
     
-
+    
     struct Teacher : Hashable {
         var id = UUID()
         var prefix : String
@@ -74,7 +74,7 @@ struct ContentView: View {
         NavigationView {
             
             VStack {
-                Spacer()
+                
                 Image("youRock")
                     .resizable()
                     .scaledToFit()
@@ -95,25 +95,19 @@ struct ContentView: View {
                         label: {
                             Text("Get Started, Miguel").padding(5)
                                 .font(.system(size: 20))
-                            
                         })
-                  
+                    Spacer()
                 }
                 Toggle(isOn: $isTeacherMode, label: {
                     Text("Teacher Mode")
                 }).frame(width: 200)
-                
+                Spacer()
                 
             }
-            
-            
         }
         
         let _ : [Class] = teacher1.classes
-        
-        
     }
-    
 }
 
 struct ContentView_Previews: PreviewProvider {

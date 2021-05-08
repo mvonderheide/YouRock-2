@@ -64,28 +64,24 @@ struct StudentHistoryView: View {
                             .frame(width: 50
                             )
                             .padding(100)
-                        
                     }
                 }
             }.tabItem{
-                Image(systemName: "folder")
-                Text("Period 1")
+                Image(systemName: "hand.wave")
+                Text("My Page")
             }
-            
             ContentView()
                 .tabItem {
                     Image(systemName: "house")
                     Text("Home")
                 }
-            
-            WelcomeScreen2()
+            StudentClass()//Was Data1 and worked fine.  When changed to StudentClass it adds another Home button
                 .tabItem {
                     Image(systemName: "person.3")
                     Text("My Class")
-                    
                 }
             
-            Data1N()
+            RockWall()
                 .tabItem {
                     Image(systemName: "triangle")
                     Text("Rock Wall")
