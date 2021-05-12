@@ -19,11 +19,6 @@ struct Period1N: View {
     
     var body: some View {
         
-        
-        //names doesn't seem to populate in "onAppear" in time for the picker to use it so we are using  hard coded names
-        
-        // given a roster of Student, create an array of String of their first and last names - will that append to the back of the array or the front?
-        
         VStack {
             ZStack {
                 Rectangle()
@@ -33,7 +28,7 @@ struct Period1N: View {
                 
                 VStack { Text("1st Period")
                     .font(.title)
-                    Text("App Dev with Swift")
+                    Text("Exploring Computer Science")
                         .font(.title3)
                     
                 }
@@ -55,19 +50,30 @@ struct Period1N: View {
                 }
             }
             
-            NavigationLink(
-                destination: ChooseCategory(),
-                label: {
-                    Text("\(selectedStudentName)")
+            ZStack {
+                Rectangle()
+                    .foregroundColor(.white)
+                    .shadow(radius: 5)
+                    .frame(height: 50)
+                NavigationLink(
+                    destination: ChooseCategory(),
+                    label: {
+                        Text("Choose an SEL Category")
+                    })
+            }
+            ZStack {
+                Rectangle()
+                    .foregroundColor(.white)
+                    .shadow(radius: 5)
+                    .frame(height: 50)
+                Button(action: {
+                    let idx = getIndex()
+                    rosterPeriod1N[idx].numRocks += 1
+                    
+                }, label: {
+                    Text("Add Rock for \(selectedStudentName)")
                 })
-            
-            Button(action: {
-                let idx = getIndex()
-                rosterPeriod1N[idx].numRocks += 1
-                
-            }, label: {
-                Text("Add Rock for \(selectedStudentName)")
-            })
+            }
             Spacer()
         }
         .onAppear{

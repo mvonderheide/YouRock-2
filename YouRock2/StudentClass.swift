@@ -38,7 +38,7 @@ struct StudentClass: View {
     var body: some View {
         
         VStack {
-            Spacer()
+            
             ZStack {
                 Rectangle()
                     .foregroundColor(.white)
@@ -47,11 +47,10 @@ struct StudentClass: View {
                 
                 VStack { Text("1st Period")
                     .font(.title)
-                    Text("App Dev with Swift")
+                    Text("Exploring Computer Science")
                         .font(.title3)
                         .padding()
                 }
-                
             }
             Spacer()
             ZStack {
@@ -60,6 +59,8 @@ struct StudentClass: View {
                     .shadow(radius: 5)
                     .frame(height: 50)
                 Text("Choose a Classmate")
+                    .font(.title3)
+                
             }
             //NavigationLink(
             //   destination: ChooseCategory(),
@@ -94,7 +95,6 @@ struct StudentClass: View {
                     
                 }
             }
-            
         }
     }
     

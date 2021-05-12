@@ -20,8 +20,26 @@ struct Data1N: View {
     
     var body: some View {
         VStack {
-            Text("1st Period Rocks!")
-                .font(.title)
+            ZStack {
+                
+                VStack {
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .shadow(color: .red, radius: 5)
+                            .frame(height: 50)
+                        
+                        Text("1st Period Rocks!")
+                            .font(.title)
+                    }
+                    
+                    Image("rockWall")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 100)
+                    
+                }
+            }
             HStack{
                 ZStack {
                     Rectangle()
@@ -29,6 +47,7 @@ struct Data1N: View {
                         .shadow(radius: 5)
                         .frame(width: width1, height: height1)
                     Text("First Name")
+                        .fontWeight(.bold)
                 }
                 ZStack {
                     Rectangle()
@@ -36,13 +55,15 @@ struct Data1N: View {
                         .shadow(radius: 5)
                         .frame(width: width2, height: height1)
                     Text("Last Name")
+                        .fontWeight(.bold)
                 }
                 ZStack {
                     Rectangle()
                         .foregroundColor(.white)
                         .shadow(radius: 5)
-                        .frame(width: width3, height: height1)
+                        .frame(width: 85, height: height1)
                     Text("# of Rocks")
+                        .fontWeight(.bold)
                     
                 }
             }
@@ -103,6 +124,8 @@ struct Data1N: View {
 struct Data1N_Previews: PreviewProvider {
     static var previews: some View {
         Data1N()
+        Data1N()
+            .environment(\.locale, Locale(identifier: "es"))
     }
 }
 ////

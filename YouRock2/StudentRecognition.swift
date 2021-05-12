@@ -12,24 +12,32 @@ struct StudentRecognition: View {
     var body: some View {
         
         VStack {
-            
+            Spacer()
             ZStack {
                 Rectangle()
                     .foregroundColor(.white)
+                    .shadow(color:.red, radius: 5)
                     .shadow(radius: 5)
                     .frame(height: 100)
-                Text("Miguel, you rock because you exhibited self-discipline and perseverance!")
-                
+                Text("Kevin, you rock because you exhibited self-discipline and perseverance!")
+                    .font(.system(size: 25))
             }
-            
             .padding()
             
-            Image("Perseverance2")
+            Image("Kevin")
                 .resizable()
                 .scaledToFit()
-                .frame(width: 350)
-                .padding(100)
+                .clipShape(Circle())
+                .shadow(color:.blue, radius: 5)
+                .frame(width: 300)
+                .padding()
+            Spacer()
             
+            NavigationLink(
+                destination: ContentView(),
+                label: {
+                    Image(systemName: "house")
+                })
         }
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
@@ -42,10 +50,8 @@ struct StudentRecognition: View {
                         )
                         .padding(100)
                 }
-                
             }
         }
-        
     }
     struct StudentRecognition_Previews: PreviewProvider {
         static var previews: some View {

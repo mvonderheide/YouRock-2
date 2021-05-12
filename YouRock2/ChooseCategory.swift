@@ -27,7 +27,7 @@ struct ChooseCategory: View {
     var body: some View {
         
         VStack {
-            Text("Choose a Category")
+            Text("Choose an SEL Category")
                 .font(.title)
             
             ZStack {
@@ -36,14 +36,12 @@ struct ChooseCategory: View {
                     .shadow(radius: 5)
                     .frame(height: 100)
                 
-                
                 NavigationLink(
                     destination: Text("Relationship Skills"),
                     label: {
                         Text("Relationship Skills")
                             .padding()
                             .foregroundColor(.blue)
-                        
                     })
             }
             
@@ -59,8 +57,6 @@ struct ChooseCategory: View {
                         Text("Responsible Decision-Making")
                             .padding()
                             .foregroundColor(.blue)
-                        
-                        
                     })
             }
             

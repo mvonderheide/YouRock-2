@@ -15,13 +15,13 @@
 "Get Started, Mr. Vonderheide" = "¡Empecemos, Sr. Vonderheide!";
 "Teacher Mode" = "Vista del profesor";
 "Choose a Student" = "Elige un estudiante";
-"Choose a Category" = "Elige una categoría";
+"Choose an SEL Category" = "Elige una categoría de SEL";
 "Relationship Skills" = "Habilidades de relación";
 "Responsible Decision-Making" = "Toma de decisiones responsable";
 "Self-Awareness" = "Conciencia de sí mismo";
 "Self-Management" = "Autogestión";
 "Social Awareness" = "Conciencia social";
-"Choose a Subcategory" = "Elige una subcategoría";
+"Choose an SEL Subcategory" = "Elige una subcategoría de SEL";
 "you managed your own emotions" = "manejaste tus propias emociones";
 "you used self-management strategies" = "usaste estrategias de autogestión";
 "you exhibited self-discipline and perseverance" = "exhibiste autodisciplina y perseverancia";
@@ -32,7 +32,7 @@
 "Last Name" = "Apellido";
 "# of Rocks" = "# de rocas";
 "1st Period Rocks!" = "¡1er período Rocks!";
-"Choose a Classmate" = "Elige un compañero de clase";
+"Choose a Classmate" = "Elige un/a compañero/a de clase";
 "Miguel, you rock because you exhibited self-discipline and perseverance!" = "Miguel, You
 Rock porque exhibiste autodisciplina y perseverancia";
 "Recognize another student" = "Dar reconocimiento a otro/a estudiante";

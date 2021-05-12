@@ -71,6 +71,7 @@ struct ContentView: View {
                     .frame(width: 350)
                     .padding(100)
                 Spacer()
+                
                 if isTeacherMode {
                     NavigationLink(
                         destination: WelcomeScreen2( rosterWelcomeScreen2 : teacher1.classes[0].roster),

@@ -44,7 +44,7 @@ struct StudentHistoryView: View {
             Text("You Rock!")
                 .font(.title3)
                 .padding()
-            Text("You have earned 6 rocks!")
+            Text("You have earned 5 rocks!")
             
             Image("studentHistory")
                 .resizable()
