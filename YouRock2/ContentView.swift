@@ -53,7 +53,7 @@ var student4 : Student = Student(firstName: "Kevin", lastName: "McQuown", numRoc
 
 var student5 : Student = Student(firstName: "Daniel", lastName: "Bang", numRocks: 7)
 
-var student6 : Student = Student(firstName: "Mia", lastName: "Harris", numRocks: 9)
+var student6 : Student = Student(firstName: "Mia", lastName: "Harris", numRocks: 10)
 
 struct ContentView: View {
     
